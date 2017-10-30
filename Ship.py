@@ -10,13 +10,11 @@ class Ship:
 	def place_ship(self):
 		sea = Grid(5,5).make_grid()
 
-		front = sea.index((self.x,self.y))
-		mid = front+1
-		rear = mid+1
+		ship = sea.index((self.x,self.y))
 
 		if self.orientation =='h':
 			print ('Orientation is horizontal')
-			print('{} {} {} are the coords'.format(sea[front], sea[mid], sea[rear]))
+			print('Coords are {}'.format(sea[ship:ship+3]))
 
 		elif self.orientation == 'v':
 			print('Orientation is vertical')
