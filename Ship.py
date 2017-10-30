@@ -7,6 +7,19 @@ class Ship:
 		self.x = x
 		self.y = y
 
-	# @property
 	def place_ship(self):
-		return self.orientation, self.x, self.y
+		sea = Grid(5,5).make_grid()
+
+		front = sea.index((self.x,self.y))
+		mid = front+1
+		rear = mid+1
+
+		if self.orientation =='h':
+			print ('Orientation is horizontal')
+			print('{} {} {} are the coords'.format(sea[front], sea[mid], sea[rear]))
+
+		elif self.orientation == 'v':
+			print('Orientation is vertical')
+
+		else:
+			print('Orientation is invalid, please enter either h or v')
