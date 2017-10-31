@@ -9,7 +9,11 @@ def make_ship():
 
 	return ship1,ship2,ship3
 
-make_ship()
+def float_ship():
+
+	ship1.place_ship()
+	ship2.place_ship()
+	ship3.place_ship()
 
 def get_grid():
 	grid = Grid(5,5)
