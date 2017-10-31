@@ -13,11 +13,26 @@ class Ship:
 		ship = sea.index((self.x,self.y))
 
 		if self.orientation =='h':
+
+			placement = sea[ship:ship+3]
+
 			print ('Orientation is horizontal')
-			print('Coords are {}'.format(sea[ship:ship+3]))
+			print('Ship has been placed at {}'.format(placement))
+
+			return placement
 
 		elif self.orientation == 'v':
+
+			mid = ship+5
+			end = mid+5
+
+			placement = [ sea[ship],sea[mid],sea[end] ]
+
 			print('Orientation is vertical')
+			print('Ship placed at {}'.format( placement ))
+
+			return placement
+			
 
 		else:
 			print('Orientation is invalid, please enter either h or v')

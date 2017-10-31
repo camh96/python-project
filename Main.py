@@ -1,19 +1,22 @@
 from Ship import Ship
 from Grid import Grid
+import gc
 
 def make_ship():
-	pass
+	ship1 = Ship('h',1,1)
+	ship2 = Ship('v',2,3)
+	ship3 = Ship('v',0,4)
+
+	return ship1,ship2,ship3
+
+make_ship()
 
 def get_grid():
 	grid = Grid(5,5)
 	grid = grid.make_grid
 	return grid
 
-def get_ship_coords():
-	print (grid)
-
-def place_ship():
-	pass
-
 def show_ships():
-	pass 
+	for obj in gc.get_objects(): # use built in garbage collector to list instances of ship object
+	    if isinstance(obj, Ship):
+	        print ('Ship found at {}'.format(obj.place_ship()))
