@@ -17,14 +17,15 @@ class Command():
 			x = command.split()[2]
 			y = command.split()[3]
 
-			Ship(orientation,x,y).place_ship()
+			Ship().place_ship(orientation,x,y)
 
 
-		elif command.split()[0] == 'show ships':
-			Ship.ships_on_sea
+		elif command.split()[0] == 'show':
+			print(Ship.list_ships())
 
 
 		elif command.split()[0] == 'exit':
-			sys.exit('Thanks for playing! ')
+			print('Thanks for playing! ')
+			stillPlaying = False
 			
 			return

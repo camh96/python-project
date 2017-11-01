@@ -1,10 +1,10 @@
 from Grid import Grid
 
 class Sea:
- 
-     def __init__(self): 
-        self._x_size = 7
-        self._y_size = 5
+
+	def __init__(self): 
+		self._x_size = 5
+		self._y_size = 5
 
 
 	def make_sea():	

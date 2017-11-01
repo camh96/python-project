@@ -5,21 +5,18 @@ class Ship:
 
 	ships_on_sea = []
 
-	def __init__(self, orientation, x, y):
+	# def __init__():
+	# 	self.orientation = str(orientation)
+	# 	self.x = int(x)
+	# 	self.y = int(y)
+
+	def place_ship(self, orientation, x, y):
+
 		self.orientation = str(orientation)
 		self.x = int(x)
 		self.y = int(y)
-		# self.placements = []
+	
 		
-
-	def place_ship(self, placement):
-
-		sea = Grid(5,5).make_grid()
-
-		# self.placements.append(placement)
-
-		print(self.placements)
-
 		sea = Grid(5,5).make_grid()
 
 		if((self.x,self.y) not in sea):
@@ -37,8 +34,6 @@ class Ship:
 
 			self.ships_on_sea.append(placement)
 
-			print(self.ships_on_sea)
-
 		elif self.orientation == 'v':
 
 			mid = ship+5
@@ -51,18 +46,16 @@ class Ship:
 
 			self.ships_on_sea.append(placement)
 
-			print(self.ships_on_sea)
-
 		else:
 			print('Orientation is invalid, please enter either h or v')
 
+	print(ships_on_sea)
 
-	# def list_ships(self,placement):
+	@staticmethod
+	def list_ships():
 
-	# 	self.ships_on_sea.append(placement)
+		ships = Ship.ships_on_sea
 
-	# 	print(self.ships_on_sea)
-
-	# 	for items in self.ships_on_sea:
-	# 		print('Ship at {}'.format(items))
+		for items in ships:
+			print('Ship at {}'.format(items))
 
