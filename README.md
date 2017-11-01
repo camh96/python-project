@@ -37,8 +37,13 @@ User stories:
 10.	 If the user enters an invalid command an error message is displayed.
 11.	 If the user enters an invalid coordinate, or orientation an error message is displayed. 
 12.	 Our user’s ships cover a minimum of 3 spaces in our grid. 
-Design notes – there were more class uses than we originally thought. Adding to our classes of ship, grid, and our main file we now have sea…
-Product backlog:
+
+### Design notes 
+
+there were more class uses than we originally thought. Adding to our classes of ship, grid, and our main file we now have sea…
+
+### Product backlog:
+
 As we were working in a team we decided to divide the work up based on the guidelines given in the project so that none of us fell behind in our work for the project. 
 Cameron largely worked on the code, and programming the battleship game. He was tasked with providing notes, and data for Manjyote and Jacob to add to the documentation. 
 The documentation, as stated previously, was based off the data and code provided by Cameron. In order to make the project clear to our instructor we put effort into explaining the code, and making it concise. We also continuously checked the guidelines and our work to make sure we were on the right track and not wasting time. 
