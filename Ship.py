@@ -15,7 +15,6 @@ class Ship:
 		self.orientation = str(orientation)
 		self.x = int(x)
 		self.y = int(y)
-	
 		
 		sea = Grid(5,5).make_grid()
 
@@ -48,8 +47,6 @@ class Ship:
 
 		else:
 			print('Orientation is invalid, please enter either h or v')
-
-	print(ships_on_sea)
 
 	@staticmethod
 	def list_ships():

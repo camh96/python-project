@@ -6,7 +6,10 @@ from itertools import chain
 stillPlaying = True
 
 while stillPlaying:
-	Command().get_user_input()
+	cmd = Command().get_user_input()
+
+	if cmd == 'exit':
+		stillPlaying = False
 
 def get_grid():
 	grid = Grid(5,5)
