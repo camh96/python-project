@@ -3,9 +3,8 @@ from Grid import Grid
 from Command import Command
 from itertools import chain
 
-stillPlaying = True
+def get_command():
 
-while stillPlaying:
-	cmd = Command().get_user_input()
+	Command().get_user_input()
 
-print('Hello')
+get_command()

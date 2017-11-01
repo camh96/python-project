@@ -5,11 +5,6 @@ class Ship:
 
 	ships_on_sea = []
 
-	# def __init__():
-	# 	self.orientation = str(orientation)
-	# 	self.x = int(x)
-	# 	self.y = int(y)
-
 	def place_ship(self, orientation, x, y):
 
 		self.orientation = str(orientation)
