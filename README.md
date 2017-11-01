@@ -42,7 +42,8 @@ Product backlog:
 As we were working in a team we decided to divide the work up based on the guidelines given in the project so that none of us fell behind in our work for the project. 
 Cameron largely worked on the code, and programming the battleship game. He was tasked with providing notes, and data for Manjyote and Jacob to add to the documentation. 
 The documentation, as stated previously, was based off the data and code provided by Cameron. In order to make the project clear to our instructor we put effort into explaining the code, and making it concise. We also continuously checked the guidelines and our work to make sure we were on the right track and not wasting time. 
-Testing:
+
+#### Testing:
 place – Three arguments, orientation (horizontal or vertical), and coordinates are outputted.
 show – Shows where the ships are placed on the grid (sea) and what orientation they are in.
 exit – Exits to the console. 

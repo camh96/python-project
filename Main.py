@@ -8,8 +8,4 @@ stillPlaying = True
 while stillPlaying:
 	cmd = Command().get_user_input()
 
-	if cmd == 'exit':
-		break
-		stillPlaying = False
-
 print('Hello')

@@ -2,6 +2,8 @@ from Ship import Ship
 
 class Command():
 
+	stillPlaying = True
+
 	def __init__(self):
 		self.ship1 = []
 		self.ship2 = []
@@ -26,4 +28,4 @@ class Command():
 
 		elif command.split()[0] == 'exit':
 			print('Thanks for playing! ')
-			stillPlaying = False
+			return False
