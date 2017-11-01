@@ -8,7 +8,7 @@ class Command():
 
 	def get_user_input(self):
 
-		command = input('>>> ')
+		command = input('Battleships >>> ')
 
 		if command.split()[0] == 'place':
 			#code for making ships
@@ -27,4 +27,3 @@ class Command():
 		elif command.split()[0] == 'exit':
 			print('Thanks for playing! ')
 			stillPlaying = False
-			break

@@ -9,9 +9,7 @@ while stillPlaying:
 	cmd = Command().get_user_input()
 
 	if cmd == 'exit':
+		break
 		stillPlaying = False
 
-def get_grid():
-	grid = Grid(5,5)
-	grid = grid.make_grid
-	return grid
+print('Hello')
