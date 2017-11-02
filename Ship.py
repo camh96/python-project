@@ -11,7 +11,7 @@ class Ship:
 		self.x = int(x)
 		self.y = int(y)
 		
-		sea = Grid(5,5).make_grid()
+		sea = Sea().make_sea(5,5)
 
 		if((self.x,self.y) not in sea):
 			print('Ship does not fit on the board, try again.')

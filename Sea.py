@@ -2,11 +2,11 @@ from Grid import Grid
 
 class Sea:
 
-	def __init__(self, _x_size, _y_size): 
-		self._x_size = 5
-		self._y_size = 5
+	def make_sea(self, x_size, y_size): 
+		
+		self.x_size = x_size
+		self.y_size = y_size
 
-
-	def make_sea():	
-		grid_area = Grid(5,5)
+		grid_area = Grid(x_size, y_size)
+		
 		return grid_area.make_grid()

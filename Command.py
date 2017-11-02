@@ -1,6 +1,6 @@
 from Ship import Ship
 from Welcome import Welcome
-import re
+import re # regular expressions
 
 class Command():
 
