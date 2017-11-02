@@ -5,6 +5,14 @@ class Ship:
 
 	ships_on_sea = []
 
+	def check_overlapping(placement):
+		for x in placement:
+			for y in Ship.ships_on_sea:
+				if x in y:
+					print('There is already a ship there, ships cannot overlap.')
+					return False
+
+
 	def place_ship(self, orientation, x, y):
 
 		self.orientation = str(orientation)
@@ -17,23 +25,23 @@ class Ship:
 			print('Ship does not fit on the board, try again.')
 			return
 
-		if (any((self.x,self.y) in x for x in Ship.ships_on_sea)):
-			print('There is already a ship there, ships cannot overlap.')
-			return
-
 		ship = sea.index((self.x,self.y))
 	
 		if self.orientation == 'h':
 
-			if self.y > 3:
-				print('Ship off board')
+			if self.y >= 3:
+				print('Ship doesn\'t fit within the board!')
+				return
 
 			placement = sea[ship:ship+3]
 
-			print ('Orientation is horizontal')
-			print('Ship has been placed at {}'.format(placement))
+			check = Ship.check_overlapping(placement)
 
-			self.ships_on_sea.append(placement)
+			if check != False:
+				print ('Orientation is horizontal')
+				print('Ship has been placed at {}'.format(placement))
+
+				self.ships_on_sea.append(placement)
 
 		elif self.orientation == 'v':
 
@@ -42,10 +50,13 @@ class Ship:
 
 			placement = [ sea[ship],sea[mid],sea[end] ]
 
-			print('Orientation is vertical')
-			print('Ship placed at {}'.format( placement ))
+			check = Ship.check_overlapping(placement)
 
-			self.ships_on_sea.append(placement)
+			if check != False:
+				print('Orientation is vertical')
+				print('Ship placed at {}'.format( placement ))
+
+				self.ships_on_sea.append(placement)
 
 		else:
 			print('Orientation is invalid, please enter either h or v')
