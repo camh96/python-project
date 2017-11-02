@@ -13,8 +13,12 @@ class Ship:
 		
 		sea = Sea().make_sea(5,5)
 
-		if((self.x,self.y) not in sea):
+		if ((self.x,self.y) not in sea):
 			print('Ship does not fit on the board, try again.')
+			return
+
+		if (any((self.x,self.y) in x for x in Ship.ships_on_sea)):
+			print('There is already a ship there, ships cannot overlap.')
 			return
 
 		ship = sea.index((self.x,self.y))

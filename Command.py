@@ -17,7 +17,7 @@ class Command():
 			if not command:
 				print('Enter something!') 
 				continue
-
+				
 			if command.split()[0] == 'place':
 
 				#code for making ships

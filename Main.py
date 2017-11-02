@@ -10,4 +10,5 @@ def get_command():
 	Command().get_user_input()
 
 Welcome.welcome_user()
+
 get_command()
