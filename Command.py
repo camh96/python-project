@@ -1,4 +1,5 @@
 from Ship import Ship
+from Welcome import Welcome
 import re
 
 class Command():
@@ -38,14 +39,17 @@ class Command():
 
 						Ship().place_ship(orientation,x,y)
 					except:
-						print('Ship wont fit on the board, try again')
+						print('Ship wont fit on the board, try again') #if ship not on board, ignore
 						continue
 				else:
-					print('Input invalid, please try again') # if it doesn't match the regex try again
+					print('Input not valid, please user either h or v for orientation') # if it doesn't match the regex try again
 
 
 			elif command.split()[0] == 'show':
 				Ship.list_ships()
+
+			elif command.split()[0] == 'help':
+				Welcome.welcome_user()	
 
 			elif command.split()[0] == 'exit':
 				print('Thanks for playing! ') # if user types exit, break the loop
