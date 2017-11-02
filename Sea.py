@@ -2,7 +2,7 @@ from Grid import Grid
 
 class Sea:
 
-	def __init__(self): 
+	def __init__(self, _x_size, _y_size): 
 		self._x_size = 5
 		self._y_size = 5
 

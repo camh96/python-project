@@ -51,8 +51,12 @@ class Ship:
 
 		ships = Ship.ships_on_sea
 
-		print('Ships found at: ')
+		if not ships:
+			print('No ships added! You can add one using "place [orientation] [x] [y] like: h 1 0"')
 
-		for items in ships:
-			print('Ship at {}'.format(items))
+		else:
+			print('Ships found at: ')
+
+			for items in ships:
+				print('Ship at {}'.format(items))
 

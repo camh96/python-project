@@ -45,8 +45,7 @@ class Command():
 
 
 			elif command.split()[0] == 'show':
-				return Ship.list_ships()
-
+				Ship.list_ships()
 
 			elif command.split()[0] == 'exit':
 				print('Thanks for playing! ') # if user types exit, break the loop
