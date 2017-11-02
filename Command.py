@@ -24,21 +24,29 @@ class Command():
 
 				#uses a regular expression to check if string matches the pattern required.
 
-				#TODO: if 
+				#TODO: if ship out of bounds, print error
 
-				if(re.match(r'^[hv]\s[^\D]\s[^\D]', command[6:])): """regex explained: if there is either h or v after 6 characters, followed by a space, a number, a space
-																	then another number, then it is valid place command """
-					orientation = command.split()[1]
-					x = command.split()[2]
-					y = command.split()[3]
-					Ship().place_ship(orientation,x,y)
+				if(re.match(r'^[hv]\s[^\D]\s[^\D]', command[6:])):
+
+					try:
+						orientation = command.split()[1]
+						x = command.split()[2]
+						y = command.split()[3]
+						
+						if orientation == 'h' and int(y) > 2:
+							print('The coordinates you have entered will put the ship out of bounds. Please try agian.')
+							continue
+
+						Ship().place_ship(orientation,x,y)
+					except:
+						print('Ship wont fit on the board, try again')
+						continue
 				else:
 					print('Input invalid, please try again') # if it doesn't match the regex try again
 
 
 			elif command.split()[0] == 'show':
-				print(Ship.list_ships()) """use the static show method on ships to list all ships, 
-											since its static we don't need an instance to call the method"""
+				print(Ship.list_ships())									
 
 
 			elif command.split()[0] == 'exit':

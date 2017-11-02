@@ -19,7 +19,10 @@ class Ship:
 
 		ship = sea.index((self.x,self.y))
 	
-		if self.orientation =='h':
+		if self.orientation == 'h':
+
+			if self.y > 3:
+				print('Ship off board')
 
 			placement = sea[ship:ship+3]
 
@@ -47,6 +50,8 @@ class Ship:
 	def list_ships():
 
 		ships = Ship.ships_on_sea
+
+		print('Ships found at: ')
 
 		for items in ships:
 			print('Ship at {}'.format(items))
