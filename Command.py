@@ -1,5 +1,4 @@
 from Ship import Ship
-import os
 import re
 
 class Command():
@@ -46,7 +45,7 @@ class Command():
 
 
 			elif command.split()[0] == 'show':
-				print(Ship.list_ships())									
+				return Ship.list_ships()
 
 
 			elif command.split()[0] == 'exit':
