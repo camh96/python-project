@@ -1,5 +1,6 @@
 from Ship import Ship
 from Welcome import Welcome
+from Visualization import Visualization as Vis
 import re # regular expressions
 
 class Command():
@@ -10,7 +11,7 @@ class Command():
 
 		while stillPlaying:
 
-			command = input('Battleships >>> ')
+			command = input('\n\nBattleships >>> ')
 
 			#if user enters nothing, will prompt for input, as empty strings are 'falsy'
 
@@ -50,6 +51,9 @@ class Command():
 
 			elif command.split()[0] == 'help':
 				Welcome.welcome_user()	
+
+			elif command.split()[0] == 'visual':
+				Vis.show_table()	
 
 			elif command.split()[0] == 'exit':
 				print('Thanks for playing! ') # if user types exit, break the loop
