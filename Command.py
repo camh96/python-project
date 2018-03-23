@@ -1,6 +1,5 @@
 from Ship import Ship
 from Welcome import Welcome
-from Visualization import Visualization as Vis
 import re # regular expressions
 
 class Command():
@@ -24,8 +23,6 @@ class Command():
 				#code for making ships
 
 				#uses a regular expression to check if string matches the pattern required.
-
-				#TODO: if ship out of bounds, print error
 
 				if(re.match(r'^[hv]\s[^\D]\s[^\D]', command[6:])):
 
